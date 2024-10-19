@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ContactoView from '@/views/ContactoView.vue'
+import NoticiasView from '@/views/NoticiasView.vue'
+import XboxView from '@/views/XboxView.vue'
+import NintendoView from '@/views/NintendoView.vue'
+import PlayStation from '@/views/PlayStation.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,14 +12,36 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: HomeView
   },
+
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/Contacto',
+    name: 'Contacto',
+    component: ContactoView
+  },
+  {
+    path: '/Noticias',
+    name: 'Noticias',
+    component: NoticiasView
+  },
+  {
+    path: '/Xbox',
+    name: 'Xbox',
+    component: XboxView
+  },
+  {
+    path: '/Nintendo',
+    name: 'Nintendo',
+    component: NintendoView
+  },
+  {
+    path: '/playstation',
+    name: 'playstation',
+    component: PlayStation
+  },
+ 
+
+
+
 ]
 
 const router = createRouter({
